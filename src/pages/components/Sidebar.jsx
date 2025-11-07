@@ -24,7 +24,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="bg-black text-gray-300  min-h-screen flex flex-col justify-between pl-12 pt-7">
+    <aside className="bg-black text-white w-[20%] sticky top-0 grow-0 shrink-0 h-screen  min-h-screen flex flex-col justify-between pl-12 pt-7">
       <div className="flex flex-col gap-12">
         <NavLink to="/" className="text-white  text-2xl font-bold tracking-wide cursor-pointer">
           <img src="/DashboardLogo.svg" alt="Resumeefy logo"/>

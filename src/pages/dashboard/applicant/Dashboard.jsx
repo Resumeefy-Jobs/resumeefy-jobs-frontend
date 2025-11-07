@@ -12,16 +12,16 @@ const Dashboard = () => {
       <div className="flex-1 flex flex-col">
         <Topbar />
 
-        <main className="p-8 space-y-8">
+        <main className="p-8 flex flex-col gap-5">
           {/* Header */}
-          <h1 className="text-[20px] text-start font-semibold text-gray-800">
+          <h1 className="text-[20px] text-start text-3xl leading-[100%] tracking-[-2%]  font-semibold text-[#000000]">
             Good morning, Andrew!
           </h1>
 
           {/* Snapshots */}
           <section style={{ boxShadow: "0px 10px 20px 0px #00000040"}} className="bg-[#ffffff] p-6 rounded-2xl shadow-sm space-y-6">
-            <h2 className="font-semibold text-start text-black">Snapshots</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <h2 className="font-semibold text-start text-2xl leading-[100%] tracking-[-2%] text-black">Snapshots</h2>
+            <div className="grid grid-cols-2 gap-[30px]">
               <SnapshotCard count="3" label="Active Applications" />
               <SnapshotCard count="2" label="Shortlisted" />
               <SnapshotCard count="1" label="Interview(s) Scheduled" />
