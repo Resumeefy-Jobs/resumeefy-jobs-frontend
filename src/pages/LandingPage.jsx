@@ -25,7 +25,7 @@ function LandingPage() {
           style={{ 
             background: "linear-gradient(180deg, rgba(0, 0, 0, 0.92) 2.65%, rgba(0, 0, 0, 0.63) 16.54%, rgba(0, 0, 0, 0) 31.44%, rgba(0, 0, 0, 0) 61.66%, rgba(0, 0, 0, 0.6) 83.91%, #000000 99.99%)"
           }} 
-          className="w-full h-full min-h-screen flex flex-col justify-between px-[60px] pt-[30px] gap-6">
+          className="w-full h-full min-h-screen flex flex-col justify-between px-[60px] pt-[30px] gap-16">
         
           {/* Navbar */}
           <Navbar onLoginClick={() => navigate("/login", { state: { background: location } })}/>
