@@ -4,11 +4,14 @@ import LandingPage from "../pages/LandingPage";
 import Login from "../pages/auth/Login";
 import SignupApplicant from "../pages/auth/SignUpApplicant";
 import SignupEmployer from "../pages/auth/SignUpEmployer";
-// import ApplicantLayout from "../layouts/ApplicantLayout";
+import ApplicantLayout from "../layouts/ApplicantLayout";
 // import EmployerLayout from "../layouts/EmployerLayout";
 // import AdminLayout from "../layouts/AdminLayout";
 // import ProtectedRoute from "../components/ProtectedRoute";
-import Dashboard from "../pages/dashboard/applicant/Dashboard";
+import ApplicantDashboard from "../pages/applicant/Dashboard";
+import FindJobs from "../pages/applicant/FindJobs";
+import SavedJobs from "../pages/applicant/SavedJobs";
+import MyApplication from "../pages/applicant/MyApplications";
 // import EmployerDashboard from "../pages/employer/Dashboard";
 // import AdminDashboard from "../pages/admin/Dashboard";
 
@@ -38,19 +41,25 @@ export default function AppRouter() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup/employer" element={<SignupEmployer />} />
         <Route path="/signup/applicant" element={<SignupApplicant />} />
-        <Route path="/dashboard/applicant" element={<Dashboard />} />
+        {/* <Route path="/dashboard/applicant" element={<ApplicantDashboard />} /> */}
+        {/* <Route path="/dashboard/applicant" element={<ApplicantLayout />} /> */}
 
         {/* Applicant */}
-        {/* <Route
+        <Route
           path="/applicant/*"
           element={
-            <ProtectedRoute role="applicant">
-              <ApplicantLayout />
-            </ProtectedRoute>
+            // <ProtectedRoute role="applicant">
+              <ApplicantLayout/>
+            // </ProtectedRoute>
           }
         >
           <Route index element={<ApplicantDashboard />} />
-        </Route> */}
+
+          {/* Additional pages */}
+          <Route path="find-jobs" element={<FindJobs />} />
+          <Route path="saved-jobs" element={<SavedJobs />} />
+          <Route path="applications" element={<MyApplication />} />
+        </Route>
 
         {/* Employer */}
         {/* <Route

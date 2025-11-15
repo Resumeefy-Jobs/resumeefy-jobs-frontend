@@ -48,7 +48,7 @@ const Navbar = ({ onLoginClick }) => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             onClick={onLoginClick}
-            className="hidden lg:block border border-white bg-transparent rounded-[16px] px-[16px] py-[8px] text-white   transition"
+            className="hidden lg:block border border-white bg-transparent rounded-2xl px-4 py-2 text-white   transition"
           >
             Login
           </motion.button>

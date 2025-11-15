@@ -13,14 +13,14 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const menuItems = [
-    { name: "Dashboard", icon: <Home size={18} />, path: "/dashboard" },
-    { name: "Find Jobs", icon: <Search size={18} />, path: "/find-jobs" },
-    { name: "Saved Jobs", icon: <Bookmark size={18} />, path: "/saved-jobs" },
-    { name: "My Applications", icon: <FileText size={18} />, path: "/applications" },
-    { name: "Interviews", icon: <Calendar size={18} />, path: "/interviews" },
-    { name: "Job Alerts", icon: <Bell size={18} />, path: "/alerts" },
-    { name: "Profile", icon: <User size={18} />, path: "/profile" },
-    { name: "Settings", icon: <Settings size={18} />, path: "/settings" },
+    { name: "Dashboard", icon: <Home size={18} />, path: "/applicant" },
+    { name: "Find Jobs", icon: <Search size={18} />, path: "/applicant/find-jobs" },
+    { name: "Saved Jobs", icon: <Bookmark size={18} />, path: "/applicant/saved-jobs" },
+    { name: "My Applications", icon: <FileText size={18} />, path: "/applicant/applications" },
+    { name: "Interviews", icon: <Calendar size={18} />, path: "/applicant/interviews" },
+    { name: "Job Alerts", icon: <Bell size={18} />, path: "/applicant/alerts" },
+    { name: "Profile", icon: <User size={18} />, path: "/applicant/profile" },
+    { name: "Settings", icon: <Settings size={18} />, path: "/applicant/settings" },
   ];
 
   return (
@@ -34,6 +34,8 @@ const Sidebar = () => {
             <li key={item.name}>
               <NavLink
                 to={item.path}
+                // to="/applicant"
+                end
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-4 py-2 rounded-l-lg transition ${
                     isActive

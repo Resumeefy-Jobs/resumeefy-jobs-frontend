@@ -11,7 +11,7 @@ const Topbar = () => {
 
       <div className="flex items-center gap-4">
         <button className="border border-gray-300 px-8 py-4 rounded-xl cursor-pointer text-sm flex items-center gap-1">
-          Go Premium <span>✨</span>
+          Go Premium <img src="/icons/premium.svg" alt="premium" />
         </button>
         <button className="relative">
           <Bell className="text-gray-600" size={22} />
