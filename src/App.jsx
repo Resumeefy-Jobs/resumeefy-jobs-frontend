@@ -1,15 +1,16 @@
 import AppRouter from "./routes/AppRouter";
 import LandingPage from "./pages/LandingPage";
-import './App.css'
+import { Toaster } from "react-hot-toast";
+import "./App.css";
 
 function App() {
-  return( 
+  return (
     <div>
+      <Toaster position="top-right" />
       <AppRouter />
       {/* <LandingPage/> */}
-    </div> 
-
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

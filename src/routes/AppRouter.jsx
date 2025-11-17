@@ -14,9 +14,9 @@ import Dashboard from "../pages/dashboard/applicant/Dashboard";
 
 export default function AppRouter() {
   const location = useLocation();
-  const state = location.state && location.state.background ? location.state : null;
+  const state =
+    location.state && location.state.background ? location.state : null;
 
-  
   const getModalContent = () => {
     switch (location.pathname) {
       case "/login":
@@ -84,20 +84,20 @@ export default function AppRouter() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => window.history.back()} 
+            onClick={() => window.history.back()}
             style={{
-              overflowY: 'scroll', // Enable vertical scrolling
-              msOverflowStyle: 'none', // IE and Edge
-              scrollbarWidth: 'none', // Firefox
+              overflowY: "scroll", // Enable vertical scrolling
+              msOverflowStyle: "none", // IE and Edge
+              scrollbarWidth: "none", // Firefox
             }}
-            >
+          >
             <motion.div
               className="bg-white rounded-2xl px-8  relative"
               initial={{ scale: 0.9, y: 30, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 30, opacity: 0 }}
               transition={{ duration: 0.25 }}
-              onClick={(e) => e.stopPropagation()} 
+              onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => window.history.back()}
@@ -105,7 +105,7 @@ export default function AppRouter() {
               >
                 ✕
               </button>
-                {getModalContent()}
+              {getModalContent()}
             </motion.div>
           </motion.div>
         )}
