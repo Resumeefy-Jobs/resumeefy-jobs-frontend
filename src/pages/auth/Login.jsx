@@ -39,7 +39,7 @@ const Login = ({ isModal = false }) => {
 
       if (res.status === 200) {
         toast.success("Login successful!");
-        navigate("/dashboard/applicant?login=success");
+        navigate("/applicant?login=success");
       } else {
         toast.error(data.message);
       }
@@ -119,7 +119,7 @@ const Login = ({ isModal = false }) => {
 
         {/* Login Button */}
         <button
-          onClick={() => navigate("/dashboard/applicant")}
+          onClick={handleLocalLogin}
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-2 transition"
         >
           {loading ? "Logging in..." : "Login"}

@@ -1,4 +1,7 @@
-// import ApplicantLayout from "/layouts/ApplicantLayout";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import toast from "react-hot-toast";
+
 import SnapshotCard from "../components/SnapshotCard";
 import QuickLinkCard from "../components/QuickLinkCard";
 import NotificationCard from "../components/NotificationCard";
@@ -8,6 +11,7 @@ const ApplicantDashboard = () => {
   const [user, setUser] = useState(null);
   const backend = import.meta.env.VITE_BACKEND_URL;
 
+  // Fetch current logged-in user
   useEffect(() => {
     const getUser = async () => {
       try {
@@ -21,8 +25,9 @@ const ApplicantDashboard = () => {
       }
     };
     getUser();
-  }, []);
+  }, [backend]);
 
+  // Show toast if redirected after login and clean URL
   useEffect(() => {
     if (params.get("login") === "success") {
       toast.success("Login successful!");
@@ -30,12 +35,12 @@ const ApplicantDashboard = () => {
       setParams(params, { replace: true });
     }
   }, [params, setParams]);
+
   return (
-    // <ApplicantLayout>
     <main className="p-8 flex flex-col gap-5">
       {/* Header */}
-      <h1 className="text-[20px] text-start text-3xl leading-[100%] tracking-[-2%]  font-semibold text-[#000000]">
-        Good morning, Andrew!
+      <h1 className="text-[20px] text-start text-3xl leading-[100%] tracking-[-2%] font-semibold text-[#000000]">
+        Good morning{user ? `, ${user.fname}` : ""}!
       </h1>
 
       {/* Snapshots */}
@@ -102,7 +107,6 @@ const ApplicantDashboard = () => {
         </a>
       </footer>
     </main>
-    // </ApplicantLayout>
   );
 };
 
