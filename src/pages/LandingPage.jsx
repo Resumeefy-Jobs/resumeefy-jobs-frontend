@@ -23,7 +23,7 @@ function LandingPage() {
             background:
               "linear-gradient(180deg, rgba(0, 0, 0, 0.92) 2.65%, rgba(0, 0, 0, 0.63) 16.54%, rgba(0, 0, 0, 0) 31.44%, rgba(0, 0, 0, 0) 61.66%, rgba(0, 0, 0, 0.6) 83.91%, #000000 99.99%)",
           }}
-          className="w-full h-full min-h-[100vh] flex flex-col justify-between px-[60px] pt-[30px] gap-6"
+          className="w-full h-full min-h-screen flex flex-col justify-between px-[60px] pt-[30px] gap-16"
         >
           {/* Navbar */}
           <Navbar
@@ -110,7 +110,7 @@ function LandingPage() {
           </div>
           {/* Footer */}
           <motion.footer
-            className="flex items-center justify-center gap-[40px]  text-[18px] text-[#FFFFFF] font-medium flex gap-6"
+            className="flex items-center justify-center gap-10  text-[18px] text-[#FFFFFF] font-medium "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}

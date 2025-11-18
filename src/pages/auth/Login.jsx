@@ -59,7 +59,7 @@ const Login = ({ isModal = false }) => {
       }`}
     >
       <motion.div
-        className="flex flex-col w-full text-black rounded-2xl p-8 max-w-md relative"
+        className="flex flex-col w-full rounded-2xl p-8 max-w-md relative text-black"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: "spring", stiffness: 120 }}
@@ -119,11 +119,8 @@ const Login = ({ isModal = false }) => {
 
         {/* Login Button */}
         <button
-          onClick={handleLocalLogin}
-          disabled={loading}
-          className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-2 transition ${
-            loading ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          onClick={() => navigate("/dashboard/applicant")}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg py-2 transition"
         >
           {loading ? "Logging in..." : "Login"}
         </button>
